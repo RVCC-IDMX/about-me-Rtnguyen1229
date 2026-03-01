@@ -1,5 +1,9 @@
 body {
-    font-family:Space+Grotesk;
+    font-family:"Space Grotesk";
     background-color:#3AB563;
     color: #4B3737;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family:"Changa One" ;
 }
