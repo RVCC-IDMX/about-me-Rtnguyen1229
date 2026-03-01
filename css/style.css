@@ -9,4 +9,24 @@ h1, h2, h3, h4, h5 {
     font-size: 40pt;
 }
 
-header {text-align: center;}
+header {text-align: center;
+
+}
+
+#hero, footer {
+    color:#A04040;
+    border:#11F552 ;
+    text-align: center;
+    background-color: #437551;
+    padding: 10px;
+}
+
+#hero img {
+    width: 300px;;
+}
+
+#bio {
+text-align: center;
+
+
+}
