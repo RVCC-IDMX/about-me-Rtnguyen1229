@@ -14,7 +14,7 @@ header {text-align: center;
 }
 
 #hero, footer {
-    color:#A04040;
+    color:#4B3737;
     border:#11F552 ;
     text-align: center;
     background-color: #437551;
@@ -24,6 +24,8 @@ header {text-align: center;
 #hero img {
     width: 300px;;
 }
+
+#ado {text-align: center;}
 
 #bio {
 text-align: center;
