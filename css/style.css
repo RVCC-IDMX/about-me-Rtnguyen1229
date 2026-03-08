@@ -15,9 +15,7 @@ h2 {
  font-size: 25pt;
 }
 
-#hobbies ul li:nth-last-child(even){
-    color: #c5da07;
-}
+/*Hero Section*/
 
 #hero, footer {
     color:#000000;
@@ -31,10 +29,33 @@ h2 {
     width: 300px;;
 }
 
-#ado {text-align: center;}
+/*biography*/
 
 #bio {
 text-align: center;
 
-
 }
+
+/*hobbies*/
+
+#hobbies ul li:nth-last-child(even){
+    color: #c5da07;
+}
+
+/*Gallery*/
+
+#gallery {
+    border: 2px solid #E01930
+}
+
+#gallery img{
+    max-width: 100%;
+}
+
+#gallery figure {
+    text-align: center;
+}
+
+/*random images*/
+
+#ado {text-align: center;}
