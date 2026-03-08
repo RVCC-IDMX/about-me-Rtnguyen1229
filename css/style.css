@@ -1,7 +1,7 @@
 body {
     font-family:"Space Grotesk";
-    background-color:#3AB563;
-    color: #363132;
+    background-color:#3D8F4F;
+    color: #000000;
 }
 
 h1, h2, h3, h4, h5 {
@@ -17,7 +17,7 @@ header {text-align: center;
     color:#4B3737;
     border:#11F552 ;
     text-align: center;
-    background-color: #E03659;
+    background-color: #E01930;
     padding: 10px;
 }
 
