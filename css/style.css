@@ -12,7 +12,7 @@ h1 {
  font-size: 40pt;
 }
 h2 {
- font-size: 25pt;
+ font-size: 30pt;
 }
 
 /*Hero Section*/
@@ -45,7 +45,8 @@ text-align: center;
 /*Gallery*/
 
 #gallery {
-    border: 2px solid #E01930
+    border: 2px solid #E01930;
+    margin-bottom:2rem;
 }
 
 #gallery img{
@@ -55,6 +56,33 @@ text-align: center;
 #gallery figure {
     text-align: center;
 }
+
+/*Literature */
+#lit {
+    border: 2px solid #E01930;
+    margin-bottom: 2rem;
+}
+
+#lit div {
+    padding:2rem;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#lit div p:first-letter {
+color: #c5da07;
+float: left;
+font-size: 40px;
+margin-right: .25em;
+line-height: .65;
+border: 4px outset #c5da07;
+box-shadow: 5px 5px 5px #rgba (0,0,0.5);
+border-top-right-radius: .2em;
+border-bottom-left-radius: .2em;
+}
+
+
+
 
 /*random images*/
 
