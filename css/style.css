@@ -6,11 +6,17 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-family:"Changa One" ;
-    font-size: 40pt;
+    text-align: center;
+}
+h1 {
+ font-size: 40pt;
+}
+h2 {
+ font-size: 25pt;
 }
 
-header {text-align: center;
-
+#hobbies ul li:nth-last-child(even){
+    color: #c5da07;
 }
 
 #hero, footer {
