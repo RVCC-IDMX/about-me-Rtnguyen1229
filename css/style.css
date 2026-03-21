@@ -80,7 +80,7 @@ section#hobbies {
     margin: 0 auto;
 }
 
-#lit div p:first-letter {
+#lit div p:first-child::first-letter {
 color: #c5da07;
 float: left;
 font-size: 40px;
@@ -93,7 +93,7 @@ border-bottom-left-radius: .2em;
 }
 
 
-
+/* tablet size */
 @media screen and (min-width: 60em;) {
 figure {
     display: grid;
@@ -107,8 +107,35 @@ figcaption{
     font-size: 2rem;
     margin-left: 1rem;
 }
+
+    figure img{
+        width: 100%;
+    }
+
+#lit div {
+    max-width: 100%;
+    columns: 20rem;
 }
 
+}
+
+
+/* large screen size */
+
+@media screen and (min-width: 100em) {
+
+    #gallery {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+        hr{
+        display: none;
+    }
+
+
+}
 
 /*random images*/
 
