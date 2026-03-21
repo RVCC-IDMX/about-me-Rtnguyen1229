@@ -1,6 +1,6 @@
 body {
     font-family:"Space Grotesk";
-    background-color:#3D8F4F;
+    background-color:#057bc5;
     color: #000000;
 }
 
@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5 {
     font-family:"Changa One" ;
     text-align: center;
 }
+
+h2 {
+    margin: .1em;
+}
+
 h1 {
  font-size: 40pt;
 }
@@ -21,7 +26,7 @@ h2 {
     color:#000000;
     border:#1AE045;
     text-align: center;
-    background-color: #E01930;
+    background-color: #096c31;
     padding: 10px;
 }
 
@@ -37,6 +42,12 @@ text-align: center;
 }
 
 /*hobbies*/
+
+section#hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #hobbies ul li:nth-last-child(even){
     color: #c5da07;
@@ -82,6 +93,21 @@ border-bottom-left-radius: .2em;
 }
 
 
+
+@media screen and (min-width: 60em;) {
+figure {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+figcaption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+}
 
 
 /*random images*/
