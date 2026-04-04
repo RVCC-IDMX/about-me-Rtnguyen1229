@@ -92,6 +92,19 @@ border-top-right-radius: .2em;
 border-bottom-left-radius: .2em;
 }
 
+/* Video Section*/
+
+#myVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ado Ya*/
+
+#ado {
+  margin-top: 20px;
+}
 
 /* tablet size */
 @media screen and (min-width: 60em;) {
