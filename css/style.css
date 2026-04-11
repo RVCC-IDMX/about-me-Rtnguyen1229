@@ -103,6 +103,55 @@ border-bottom-left-radius: .2em;
 /* Contact Form*/
 #formElements {
     display: grid;
+    row-gap: .em;
+}
+
+#contact {
+  background: linear-gradient(135deg, #1565c0 0%, #42a5f5 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+fieldset {
+    border: 2px solid #E01930
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+legend {
+background-color: #096c31;
+color: white;
+padding: .5em;
+}
+
+#contact ul {
+    list-style: none;
+    padding:0px;
+}
+
+#contact li {
+    margin: 1rem;
+}
+
+#contact input, #contact textarea, #contact select, #contact button {
+    padding: .5em;
+    font-size: 1rem;
+}
+
+#contact button {
+background-color: #096c31;
+color: white;
+border: 1px solid #096c31;
+max-width: 500px;
+width: 50%;
+justify-self: center;
+}
+
+#contactForm textarea {
+    margin-bottom: 1em;
 }
 
 /* Ado Ya*/
@@ -152,6 +201,91 @@ figcaption{
         display: none;
     }
 
+
+}
+
+/* iphone 6/7/8 size */
+
+@media screen and (max-width: 414px) {
+
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > section {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    h1, h2, h3, p {
+        text-align: center;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    ul {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    nav, header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact {
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem auto;
+        box-sizing: border-box;
+    }
+
+    #contact input,
+    #contact textarea,
+    #contact select {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #contact button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    fieldset {
+        width: 100%;
+        padding: 0.5rem;
+    }
 
 }
 
