@@ -100,6 +100,11 @@ border-bottom-left-radius: .2em;
   align-items: center;
 }
 
+/* Contact Form*/
+#formElements {
+    display: grid;
+}
+
 /* Ado Ya*/
 
 #ado {
