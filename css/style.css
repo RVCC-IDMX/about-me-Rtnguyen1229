@@ -218,7 +218,7 @@ figcaption{
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-
+    }
     body {
         display: flex;
         flex-direction: column;
@@ -291,4 +291,12 @@ figcaption{
 
 /*random images*/
 
-#ado {text-align: center;}
+#ado {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
