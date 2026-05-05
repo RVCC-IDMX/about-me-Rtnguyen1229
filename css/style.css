@@ -384,10 +384,10 @@ figure img{
     }
 
     /* Nav and header stretch full width on mobile */
-    nav, header {
+    /* Note: do NOT override display/justify on nav here — */
+    /* that breaks the hamburger flex layout in nav.css    */
+    header {
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     /* Contact section fills full width on mobile */
@@ -419,6 +419,68 @@ figure img{
     }
 
 }
+
+/* ================================================
+   WAVY TITLE ANIMATION
+   Each letter in the blog title bounces up and down
+   with a staggered delay to create a wave effect.
+   Based on: https://prismic.io/blog/css-text-animations (#9 Wavy Text)
+================================================ */
+
+#blog-title {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.wave-letter {
+    position: relative;
+    display: inline-block;
+    animation: wave 1.3s ease infinite;
+}
+
+/* space spans need explicit width so they don't collapse */
+.wave-letter:empty,
+.wave-letter {
+    white-space: pre;
+}
+
+@keyframes wave {
+    0%   { top: 0px; }
+    50%  { top: -15px; }
+    100% { top: 0px; }
+}
+
+/* Staggered animation delays — one per letter (moved from inline styles) */
+#blog-title .wave-letter:nth-child(1) { animation-delay: 0.0s; }
+#blog-title .wave-letter:nth-child(2) { animation-delay: 0.1s; }
+#blog-title .wave-letter:nth-child(3) { animation-delay: 0.2s; }
+#blog-title .wave-letter:nth-child(4) { animation-delay: 0.3s; }
+#blog-title .wave-letter:nth-child(5) { animation-delay: 0.4s; }
+#blog-title .wave-letter:nth-child(6) { animation-delay: 0.5s; }
+#blog-title .wave-letter:nth-child(7) { animation-delay: 0.6s; }
+#blog-title .wave-letter:nth-child(8) { animation-delay: 0.7s; }
+#blog-title .wave-letter:nth-child(9) { animation-delay: 0.8s; }
+#blog-title .wave-letter:nth-child(10) { animation-delay: 0.9s; }
+#blog-title .wave-letter:nth-child(11) { animation-delay: 1.0s; }
+#blog-title .wave-letter:nth-child(12) { animation-delay: 1.1s; }
+#blog-title .wave-letter:nth-child(13) { animation-delay: 1.2s; }
+#blog-title .wave-letter:nth-child(14) { animation-delay: 1.3s; }
+#blog-title .wave-letter:nth-child(15) { animation-delay: 1.4s; }
+#blog-title .wave-letter:nth-child(16) { animation-delay: 1.5s; }
+#blog-title .wave-letter:nth-child(17) { animation-delay: 1.6s; }
+#blog-title .wave-letter:nth-child(18) { animation-delay: 1.7s; }
+#blog-title .wave-letter:nth-child(19) { animation-delay: 1.8s; }
+#blog-title .wave-letter:nth-child(20) { animation-delay: 1.9s; }
+#blog-title .wave-letter:nth-child(21) { animation-delay: 2.0s; }
+#blog-title .wave-letter:nth-child(22) { animation-delay: 2.1s; }
+#blog-title .wave-letter:nth-child(23) { animation-delay: 2.2s; }
+#blog-title .wave-letter:nth-child(24) { animation-delay: 2.3s; }
+#blog-title .wave-letter:nth-child(25) { animation-delay: 2.4s; }
+#blog-title .wave-letter:nth-child(26) { animation-delay: 2.5s; }
+
+
 
 /* ================================================
    ADO SECTION — FULL STYLES

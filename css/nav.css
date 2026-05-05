@@ -40,8 +40,10 @@ header {
     background-color: #333;
     color: whitesmoke;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -66,7 +68,85 @@ header {
     font-size: 1.2em;
 }
 
+/* ================================================
+   HAMBURGER ICON
+   Three stacked <span> bars inside a <label>.
+   Visible only on mobile (hidden on wide screens).
+================================================ */
+
+/* Hide the actual checkbox — it's only used for state */
+.nav-toggle {
+    display: none;
+}
+
+/* The clickable hamburger icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Each bar of the hamburger */
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ================================================
+   HAMBURGER -> X ANIMATION
+   When checkbox is checked, morph bars into an X
+================================================ */
+
+/* Rotate top bar down */
+.nav-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(0.77rem) rotate(45deg);
+}
+
+/* Fade out middle bar */
+.nav-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Rotate bottom bar up */
+.nav-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-0.77rem) rotate(-45deg);
+}
+
+/* ================================================
+   MOBILE NAV LINKS
+   Hidden by default on mobile; shown when
+   the checkbox is checked
+================================================ */
+
+/* On mobile: links take full width below logo + hamburger */
+.navbar-links {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Show the menu when checkbox is checked */
+.nav-toggle:checked ~ .navbar-links {
+    max-height: 400px;
+}
+
 /* navigation list */
+
+.navbar-links ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
 
 .navbar-links li {
     list-style: none;
@@ -99,22 +179,33 @@ header {
 }
 
 /*
-media query for non-mobile nav bar
-min-width set to width of nav elements
-such that no text wraps
+   DESKTOP NAV (min-width: 60rem)
+   Hide the hamburger, show links normally in a row
 */
 
 @media screen and (min-width: 60rem) {
 
-.navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.navbar ul {
-    display: flex;
-    justify-content: space-between;
-}
+    /* Hide hamburger on desktop */
+    .hamburger {
+        display: none;
+    }
+
+    /* Always show links on desktop, reset mobile collapse */
+    .navbar-links {
+        width: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-between;
+    }
 
 }
