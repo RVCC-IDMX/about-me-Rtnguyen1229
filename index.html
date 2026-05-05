@@ -17,15 +17,36 @@
 
     <body>
 
+        <!-- Site header containing the navigation bar -->
+
         <header>
             <nav class="navbar">
+
+                <!-- Logo area: personal SVG logo + site title -->
+
                 <div class="logo">
 
-                    <img src="img/logo-96X96.svg" alt="Blue origami logo" />
+                    <img src="img/personal logo.svg" alt="My Initals Logo" />
                     <h1>Web Dev I</h1>
 
                 </div>
 
+                <!--
+                    Hamburger toggle — CSS-only technique.
+                    The hidden checkbox controls open/closed state.
+                    The label acts as the clickable hamburger icon.
+                    The ~ sibling selector in nav.css shows/hides .navbar-links.
+                -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle"
+                    aria-hidden="true">
+                <label for="nav-toggle" class="hamburger"
+                    aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Navigation links that anchor to page sections -->
                 <div class="navbar-links">
                     <ul>
                         <li><a href="#bio">Bio</a></li>
@@ -41,6 +62,8 @@
 
         <main>
 
+            <!-- Hero section: avatar image with name and location -->
+
             <section id="hero">
                 <img src="img/avataaars.png" alt="Avatar picture of me">
                 <div>
@@ -49,6 +72,7 @@
                 </div>
             </section>
 
+            <!-- Biography section: short personal description -->
             <section id="bio">
 
                 <h2>Biography:</h2>
@@ -65,6 +89,7 @@
 
             </section>
 
+            <!-- Hobbies section: unordered list of personal interests -->
             <section id="hobbies">
 
                 <h2>Hobbies:</h2>
@@ -81,75 +106,195 @@
 
             <h2>Photo Gallery</h2>
 
+            <!-- Photo Gallery section: figures with images and captions -->
+
             <section id="gallery">
 
 
                 <figure>
                     <img src="img/guitar-640w.jpg" alt="guitar collection">
-                    <figcaption>My collection of guitars and basses</figcaption>
+                    <figcaption>This is my collection of guitars and basses.
+                        Specifically I have 2 guitars and 2
+                        basses, the guitars being a yamaha PAC012 and a Kramera
+                        Baretta Special in
+                        vintage white. Bass wise I have the Austin APB200 in red
+                        and a Yamaha rbx170 in
+                        black. I haven’t really had time to practice either
+                        guitar or bass which kinda
+                        sucks but I was able to learn 1 song on bass during
+                        winter break.</figcaption>
 
                 </figure>
 
                 <hr>
                 <figure>
                     <img src="img/gym-640w.jpg" alt="me at the gym">
-                    <figcaption>Me at the gym at 5am</figcaption>
+                    <figcaption>This is a picture of me at the gym at 5am. For
+                        context I have been working out
+                        with my friends inconsistently for the past 2 years but
+                        recently in February I
+                        started going to the gym with my brother and cousin but
+                        since we all have
+                        different time schedules it led to us having to go the
+                        gym at 5am which wasn’t
+                        as bad as I thought it was.</figcaption>
                 </figure>
 
                 <hr>
                 <figure>
                     <img src="img/family-gambling-640w.jpg"
                         alt="gambling with family">
-                    <figcaption>Gambling with family on New Years</figcaption>
+                    <figcaption>This is me gambling with my family on new years.
+                        The game is called Bầu cua cá
+                        cọp which translates to Fish-Prawn-Crab,
+                        Gourd-Crab-Shrimp. The whole point of
+                        the game is that we bet on one of the mentioned animals
+                        and we take 3 dice that
+                        have each animal on it and put it in a bowl where we
+                        spin it. The dice is then
+                        revealed and if the animal you bet on was on the
+                        revealed dice you win. We
+                        traditionally play this game on new years for fun and
+                        good luck.</figcaption>
+                </figure>
+
+                <hr>
+                <figure>
+                    <img src="img/me-cuzzos.png" alt="Me With Cousins">
+                    <figcaption>This is a picture of me and my cousins on my
+                        cousin's wedding day. The venue was
+                        a chinese restaurant and a few hours after the party
+                        started, we needed a break
+                        from the loud music and adults so there was a boba place
+                        next door that we went
+                        to. After grabbing our drinks we took a group photo on
+                        our cousin's disposable
+                        camera. (I am the guy in the suit in the middle that is
+                        crouching)</figcaption>
                 </figure>
 
             </section>
 
-            <h2>Section Of Dracula</h2>
+            <h2 id="blog-title" aria-label="A Blog About CSS Animation">
+                <span class="wave-letter">A</span>
+                <span class="wave-letter"> </span>
+                <span class="wave-letter">B</span>
+                <span class="wave-letter">l</span>
+                <span class="wave-letter">o</span>
+                <span class="wave-letter">g</span>
+                <span class="wave-letter"> </span>
+                <span class="wave-letter">A</span>
+                <span class="wave-letter">b</span>
+                <span class="wave-letter">o</span>
+                <span class="wave-letter">u</span>
+                <span class="wave-letter">t</span>
+                <span class="wave-letter"> </span>
+                <span class="wave-letter">C</span>
+                <span class="wave-letter">S</span>
+                <span class="wave-letter">S</span>
+                <span class="wave-letter"> </span>
+                <span class="wave-letter">A</span>
+                <span class="wave-letter">n</span>
+                <span class="wave-letter">i</span>
+                <span class="wave-letter">m</span>
+                <span class="wave-letter">a</span>
+                <span class="wave-letter">t</span>
+                <span class="wave-letter">i</span>
+                <span class="wave-letter">o</span>
+                <span class="wave-letter">n</span>
+            </h2>
 
+            <!-- Literature section: Short blog by me about css animation -->
             <article id="lit">
 
-
                 <div>
-                    <p>How these papers have been placed in sequence will be
-                        made manifest in the
-                        reading of them. All needless matters have been
-                        eliminated, so that a
-                        history almost at variance with the possibilities of
-                        later-day belief may
-                        stand forth as simple fact. There is throughout no
-                        statement of past things
-                        wherein memory may err, for all the records chosen are
-                        exactly contemporary,
-                        given from the standpoints and within the range of
-                        knowledge of those who
-                        made them.</p>
+                    <p>In the early days of web development adding motion to a
+                        webpage meant wrestling with JavaScript libraries,
+                        clunky setInterval loops, and unpredictable browser
+                        quirks. Today its a very different story. What once
+                        required complex JavaScript libraries can now be
+                        accomplished with pure CSS which results in smoother
+                        performance, better battery life, and simplified code.
+                    </p>
 
-                    <p>I am beginning to feel this nocturnal existence tell on
-                        me. It is destroying
-                        my nerve. I start at my own shadow, and am full of all
-                        sorts of horrible
-                        imaginings. God knows that there is ground for my
-                        terrible fear in this
-                        accursed place! I looked out over the beautiful expanse,
-                        bathed in soft
-                        yellow moonlight till it was almost as light as day.</p>
+                    <p>At their core CSS animations is a method of animating
+                        HTML elements by defining changes in properties such
+                        as position, size, and color through a series of
+                        keyframes. You can make elements fade in, slide, bounce,
+                        spin, or do just about anything you can imagine just
+                        with a few lines of code. "Animations consist of two
+                        components: a style describing the CSS animation, and a
+                        set of keyframes that indicate the start and end states
+                        of the animation's style, as well as possible
+                        intermediate waypoints."
+                        (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using"
+                            target="_blank">MDN Web Docs</a>)</p>
 
-                    <p>We kept on ascending, with occasional periods of quick
-                        descent, but in the
-                        main always ascending. Suddenly, I became conscious of
-                        the fact that the
-                        driver was in the act of pulling up the horses in the
-                        courtyard of a vast
-                        ruined castle, from whose tall black windows came no ray
-                        of light, and whose
-                        broken battlements showed a jagged line against the
-                        moonlit sky.</p>
+                    <p>Getting started is simpler than you might think. "When
+                        you
+                        specify CSS styles inside the @keyframes rule, the
+                        animation will gradually change from the current style
+                        to the new style at certain times. To get an animation
+                        to work, you must bind the animation to an element. The
+                        animation-duration property defines how long an
+                        animation
+                        should take to complete — if this property is not
+                        specified, no animation will occur, because the default
+                        value is 0s."
+                        (<a href="https://www.w3schools.com/css/css3_animations.asp"
+                            target="_blank">W3Schools</a>)</p>
 
+                    <p>There are three key advantages to CSS animations over
+                        traditional script-driven techniques: you can create
+                        basic animations with a few lines of CSS with no
+                        JavaScript required; the animations run well even under
+                        moderate system load; and letting the browser control
+                        the animation sequence allows it to optimize
+                        performance,
+                        for example by reducing the update frequency of
+                        animations running in tabs that aren't currently
+                        visible.</p>
+
+                    <p>CSS animations has evolved well beyond simple fades and
+                        slides. "You can now orchestrate page-to-page
+                        transitions
+                        with the View Transitions API, drive animations directly
+                        from scroll with @scroll-timeline, and animate custom
+                        properties via @property so the browser can interpolate
+                        them on the compositor." One particularly exciting
+                        addition is the linear() easing function, which uses a
+                        series of linear lines to make curves which create
+                        surprisingly realistic visual physics and adding genuine
+                        interest to the user experience.
+                        (<a href="https://webwrits.com/2025/11/24/10-modern-css-tricks-to-animate-your-website-2025-guide/"
+                            target="_blank">WebWrits</a>)</p>
+
+                    <p>If you want to hit the ground running, CSS animation
+                        libraries are a great shortcut. Animista is a very handy
+                        on demand CSS animations library that provides
+                        ready made animations with no installation required.
+                        You can visit its playground, choose an animation, and
+                        get the
+                        relevant class and keyframes all in native CSS with
+                        no external dependencies.</p>
+
+
+                    <p>CSS animations are no longer just a nice to have.
+                        Websites with motion outperform static websites in terms
+                        of user engagement and session duration. Hover effects,
+                        button animations, slide-in menus, and animated loaders
+                        all give users a more responsive and satisfying
+                        experience. Whether you are adding a subtle fade to a
+                        card or building full scroll driven storytelling
+                        experiences. CSS gives you the tools to do it elegantly
+                        and performantly. You should start small, experiment
+                        often, and let
+                        your UI breathe with motion.</p>
                 </div>
 
             </article>
 
+            <!-- Video section: embedded YouTube iframe -->
             <section id="myVideo">
 
                 <h2>A Short Video:</h2>
@@ -163,6 +308,7 @@
 
             </section>
 
+            <!-- Contact section: form connected to Netlify Forms for submissions -->
             <section id="contact">
 
                 <h2>Contact Us:</h2>
@@ -239,6 +385,7 @@
 
             </section>
 
+            <!-- Ado approved section -->
             <section id="ado">
 
                 <img src="img/ado-approved.png" alt="Ado approveD">
@@ -247,10 +394,14 @@
 
         </main>
 
+        <!-- Footer: copyright notice -->
 
         <footer>
 
             © 2026 - Ryan Nguyen
+
+            <a
+                href="https://github.com/RVCC-IDMX/about-me-Rtnguyen1229">https://github.com/RVCC-IDMX/about-me-Rtnguyen1229</a>
 
         </footer>
 
