@@ -4,6 +4,8 @@
 
 This project is a personal "About Me" webpage that I built for my Web Dev I class. This project showcases my biography, some hobbies, a photo gallery of those hobbies, my short blog, a video for my midterm project, and a contact form. This website is fully accesible across mobile, tablet, and desktop screen sizes and this website is deployed live from netlify.
 
+
+
 Description
 This project was made to help me practice my web dev skills and help me build it from the ground up.
 The following section is gonna be a breakdown of what I have learned and applied from each section:
@@ -48,11 +50,15 @@ Citations
 
 Avatar image — Generated using avataaars.io, a free avatar generator.
 
-Ado approved GIF — "Ado Epic Approved" GIF sourced from GIPHY. All rights belong to Ado / the original creator.
+Ado approved — "Ado Epic Approved" GIF sourced from GIPHY. All rights belong to Ado / the original creator.
 
 Literature excerpt — From Dracula by Bram Stoker (1897). Public domain.
 
 Fonts — Space Grotesk and Changa One via Google Fonts, licensed under the SIL Open Font License.
+
+Alphacorsa font — Alphacorsa by Lettercorner Studio, sourced from 1001fonts.com. Free for personal use only.
+
+Design tool — logo designed using Figma.
 
 YouTube video — Embedded via YouTube's standard iframe embed. Video rights belong to the original creator.
 

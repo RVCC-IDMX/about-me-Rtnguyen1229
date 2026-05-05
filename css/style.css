@@ -1,9 +1,16 @@
+/* ================================================
+   GLOBAL STYLES
+   Base font, background color, and text color
+   for the entire page
+================================================ */
+
 body {
     font-family:"Space Grotesk";
-    background-color:#006064;
+    background-color:#006064; /* dark cyan — passes WCAG AAA with white text */
     color: #ffff;
 }
 
+/* All headings use Changa One font and are centered */
 h1, h2, h3, h4, h5 {
     font-family:"Changa One" ;
     text-align: center;
@@ -13,6 +20,7 @@ h2 {
     margin: .1em;
 }
 
+/* Heading font sizes */
 h1 {
  font-size: 40pt;
 }
@@ -20,28 +28,38 @@ h2 {
  font-size: 30pt;
 }
 
-/*Hero Section*/
+/* ================================================
+   HERO SECTION
+   Displays avatar image, name, and location
+   Shares background color with the footer
+================================================ */
 
 #hero, footer {
     color:#fffff;
     border:#1AE045;
     text-align: center;
-    background-color: #096c31;
+    background-color: #096c31; /* forest green */
     padding: 10px;
 }
 
+/* Fixed width for the avatar image */
 #hero img {
     width: 300px;;
 }
 
-/*biography*/
+/* ================================================
+   BIOGRAPHY SECTION
+   Simple centered text block
+================================================ */
 
 #bio {
 text-align: center;
-
 }
 
-/*hobbies*/
+/* ================================================
+   HOBBIES SECTION
+   Flexbox column to center the list on the page
+================================================ */
 
 section#hobbies {
     display: flex;
@@ -49,40 +67,72 @@ section#hobbies {
     align-items: center;
 }
 
+/* Alternates color of every even list item counting from the bottom */
 #hobbies ul li:nth-last-child(even){
-    color: #ecff3d;
+    color: #ecff3d; /* yellow-green accent color */
 }
 
-/*Gallery*/
+/* ================================================
+   PHOTO GALLERY SECTION
+   Red border around the whole gallery
+   Images are responsive with max-width 100%
+   Hover effect: zoom in on image
+   On large screens, becomes a horizontal flexbox row
+================================================ */
 
 #gallery {
-    border: 2px solid #E01930;
+    border: 2px solid #E01930; /* crimson red border */
     margin-bottom:2rem;
 }
 
+/* Responsive images — never overflow their container */
 #gallery img{
     max-width: 100%;
 }
 
+/* Center the caption text under each image */
 #gallery figure {
     text-align: center;
 }
 
-/*Literature */
+/* Smooth transition for the zoom hover effect */
+#gallery figure img {
+    transition: transform 0.3s ease;
+}
+
+/* Scale up slightly on hover for an interactive feel */
+#gallery figure img:hover {
+    transform: scale(1.05);
+}
+
+/* Smaller caption text so it doesn't overpower the images */
+figcaption {
+    font-size: 0.9rem;
+}
+
+/* ================================================
+   LITERATURE SECTION
+   Red border matching the gallery
+   Drop cap on the first letter of the first paragraph
+   On tablet/desktop, text flows into CSS columns
+================================================ */
+
 #lit {
     border: 2px solid #E01930;
     margin-bottom: 2rem;
 }
 
+/* Centers the text block and limits its width on mobile */
 #lit div {
     padding:2rem;
     max-width: 40rem;
     margin: 0 auto;
 }
 
+/* Decorative drop cap on the first letter of the excerpt */
 #lit div p:first-child::first-letter {
-color: #ecff3d;
-float: left;
+color: #ecff3d;        /* yellow-green to match accent color */
+float: left;           /* allows text to wrap around the letter */
 font-size: 40px;
 margin-right: .25em;
 line-height: .65;
@@ -92,7 +142,10 @@ border-top-right-radius: .2em;
 border-bottom-left-radius: .2em;
 }
 
-/* Video Section*/
+/* ================================================
+   VIDEO SECTION
+   Centers the YouTube iframe on the page
+================================================ */
 
 #myVideo {
   display: flex;
@@ -100,12 +153,19 @@ border-bottom-left-radius: .2em;
   align-items: center;
 }
 
-/* Contact Form*/
+/* ================================================
+   CONTACT FORM
+   Blue gradient card wrapping the form
+   CSS grid layout for the form fields
+================================================ */
+
+/* Grid layout stacks labels above inputs with consistent spacing */
 #formElements {
     display: grid;
     row-gap: 1em;
 }
 
+/* Blue gradient card style for the contact section */
 #contact {
   background: linear-gradient(135deg, #1565c0 0%, #42a5f5 100%);
   padding: 2rem;
@@ -114,19 +174,21 @@ border-bottom-left-radius: .2em;
   margin: 2rem auto;
 }
 
+/* Red border around fieldsets to match site accent color */
 fieldset {
-    border: 2px solid #E01930
+    border: 2px solid #E01930;
     margin-top: 1em;
     margin-bottom: 1em;
-
 }
 
+/* Green legend background to match hero/footer color */
 legend {
 background-color: #096c31;
 color: white;
 padding: .5em;
 }
 
+/* Remove default list bullets from the radio button list */
 #contact ul {
     list-style: none;
     padding:0px;
@@ -136,104 +198,155 @@ padding: .5em;
     margin: 1rem;
 }
 
+/* Consistent padding and font size across all form inputs */
 #contact input, #contact textarea, #contact select, #contact button {
     padding: .5em;
     font-size: 1rem;
 }
 
+/* Green submit button styled to match the hero section */
 #contact button {
 background-color: #096c31;
 color: white;
 border: 1px solid #096c31;
 max-width: 500px;
 width: 50%;
-justify-self: center;
+justify-self: center; /* centers the button in the grid column */
 }
 
+/* Extra bottom margin on the textarea to separate it from radio buttons */
 #contactForm textarea {
     margin-bottom: 1em;
 }
 
-/* Ado Ya*/
+/* ================================================
+   ADO SECTION
+   Fun decorative GIF centered at the bottom of the page
+================================================ */
 
 #ado {
   margin-top: 20px;
 }
 
-/* tablet size */
+/* ================================================
+   MEDIA QUERY — TABLET (min-width: 60em / ~960px)
+   Gallery figures switch to a 2-column CSS grid
+   Literature text flows into auto CSS columns
+   Resets mobile flex centering back to block layout
+================================================ */
+
 @media screen and (min-width: 60em) {
 
+/* Reset overflow from mobile styles */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
+/* Reset body from mobile flex to normal block flow */
+body {
+    display: block;
+}
+
+/* Reset main from mobile flex to normal block flow */
+main {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Figcaption becomes a flex item to vertically center next to image */
 figcaption{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 0.9rem;
     margin-left: 1rem;
 }
 
-    figure img{
-        width: 100%;
-    }
+/* Images fill their grid column fully */
+figure img{
+    width: 100%;
+}
 
+/* Literature text flows into auto columns based on 20rem column width */
 #lit div {
     max-width: 100%;
     columns: 20rem;
 }
 
+/* Prevents paragraphs from breaking awkwardly across columns */
 #lit div p {
     break-inside: avoid;
 }
 
 }
 
-
-/* large screen size */
+/* ================================================
+   MEDIA QUERY — LARGE SCREEN (min-width: 100em / ~1600px)
+   Gallery becomes a horizontal row of all photos
+   Literature text splits into 3 explicit columns
+================================================ */
 
 @media screen and (min-width: 100em) {
 
+    /* Gallery photos display side by side in a row */
     #gallery {
         display: flex;
         flex-direction: row;
     }
 
+    /* Hide the horizontal rules between gallery items on large screens */
     hr {
         display: none;
     }
 
+    /* 3-column layout for the Dracula excerpt */
     #lit div {
         max-width: 100%;
         columns: 3;
         column-gap: 2rem;
     }
 
+    /* Prevent paragraphs from splitting across columns */
     #lit div p {
         break-inside: avoid;
     }
 
 }
 
-/* iphone 6/7/8 size */
+/* ================================================
+   MEDIA QUERY — MOBILE (max-width: 414px / iPhone 6/7/8)
+   Full width layout, centered flex column
+   Inputs and buttons stretch to full width
+================================================ */
 
 @media screen and (max-width: 414px) {
 
+    /* Apply border-box sizing and cap width on all elements */
     * {
         box-sizing: border-box;
         max-width: 100%;
     }
 
+    /* Remove any default margin/padding and prevent horizontal scroll */
     html, body {
         width: 100%;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
+
+    /* Stack content in a centered column on small screens */
     body {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    /* Main fills full width and stacks sections vertically */
     main {
         width: 100%;
         padding: 0 1rem;
@@ -242,17 +355,20 @@ figcaption{
         align-items: center;
     }
 
+    /* Each section fills full width with side padding */
     main > section {
         width: 100%;
         text-align: center;
         padding: 0 1rem;
     }
 
+    /* Center all text elements and prevent overflow */
     h1, h2, h3, p {
         text-align: center;
         width: 100%;
     }
 
+    /* All images are responsive and centered */
     img {
         max-width: 100%;
         height: auto;
@@ -260,18 +376,21 @@ figcaption{
         margin: 0 auto;
     }
 
+    /* Keep list text left-aligned but center the list block itself */
     ul {
         text-align: left;
         display: inline-block;
         margin: 0 auto;
     }
 
+    /* Nav and header stretch full width on mobile */
     nav, header {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
+    /* Contact section fills full width on mobile */
     #contact {
         width: 100%;
         padding: 1rem;
@@ -279,6 +398,7 @@ figcaption{
         box-sizing: border-box;
     }
 
+    /* Inputs fill full width and use 16px to prevent iOS auto-zoom */
     #contact input,
     #contact textarea,
     #contact select {
@@ -286,11 +406,13 @@ figcaption{
         font-size: 16px;
     }
 
+    /* Submit button fills full width on mobile */
     #contact button {
         width: 100%;
         max-width: 100%;
     }
 
+    /* Fieldset fills full width with reduced padding */
     fieldset {
         width: 100%;
         padding: 0.5rem;
@@ -298,7 +420,11 @@ figcaption{
 
 }
 
-/*random images*/
+/* ================================================
+   ADO SECTION — FULL STYLES
+   Centered flex container for the Ado GIF
+   (overrides the margin-top set earlier above)
+================================================ */
 
 #ado {
     text-align: center;
